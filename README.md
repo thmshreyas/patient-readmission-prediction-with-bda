@@ -12,7 +12,7 @@ It includes two dashboards:
 
 ### Architecture Workflow
 
-1. **User Input Dashboard** → Publishes patient details to a Kafka topic (`patient-input`).
+1. **User Input Dashboard** → Publishes patient details to a Kafka topic (`patient-readmission`).
 2. **Apache Kafka** → Acts as a message broker for streaming patient data.
 3. **Apache Spark Structured Streaming** → Reads from Kafka, processes and predicts using a trained ML model.
 4. **HDFS (Hadoop Distributed File System)** → Stores both raw and processed data.
@@ -39,7 +39,7 @@ It includes two dashboards:
 ```
 patient-readmission-prediction-with-bda/
 │
-├── app/
+├── app/app2/
 │   ├── dashboard_input.py           # Streamlit UI for data entry (publishes to Kafka)
 │   ├── dashboard_predict.py         # Streamlit UI for showing predictions
 │   ├── kafka_producer.py            # Sends user input to Kafka topic
@@ -246,8 +246,8 @@ Each record includes:
 
 ## 👨‍💻 Contributors
 
-* **Your Name** – Project Lead & Developer
-* (Add your teammates if applicable)
+* **Shreyas T H M** – Project Lead & Developer
+
 
 ---
 
