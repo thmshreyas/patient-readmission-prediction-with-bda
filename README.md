@@ -37,26 +37,49 @@ It includes two dashboards:
 ## 🗂️ Project Structure
 
 ```
-patient-readmission-prediction-with-bda/
-│
-├── app/app2/
-│   ├── dashboard_input.py           # Streamlit UI for data entry (publishes to Kafka)
-│   ├── dashboard_predict.py         # Streamlit UI for showing predictions
-│   ├── kafka_producer.py            # Sends user input to Kafka topic
-│   ├── spark_kafka_consumer.py      # Spark job to read from Kafka, predict, and store in HDFS
-│   ├── model.pkl                    # Trained RandomForest model
-│   └── preprocessing.py             # Handles encoding, feature scaling, etc.
+Based on the list you provided, here is the file structure:
+
+```
+.
+├── app/
+│   ├── app2/
+│   ├── display_dashboard.py
+│   ├── ingestion_consumer.py
+│   ├── producer_dashboard.py
+│   ├── spark_job.py
+│   ├── dashboard.py
+│   ├── dashboard_input.py
+│   ├── dashboard_predict.py
+│   ├── predicted_output.csv
+│   ├── spark_streaming.py
+│   ├── spark_to_dashboard.py
+│   └── streamed_data.csv
 │
 ├── data/
-│   ├── patient_data.csv             # Example dataset used for model training
-│   ├── predictions/                 # HDFS target output (can be linked)
+│   ├── IDS_mapping.csv
+│   ├── cleaned_patient_data.csv
+│   └── diabetic_data.csv
 │
 ├── notebooks/
-│   └── model_training.ipynb         # ML model training notebook
+│   ├── data_preprocessing.ipynb
+│   ├── feature_columns.pkl
+│   ├── model_evaluation.ipynb
+│   ├── model_training.ipynb
+│   ├── readmission_model.pkl
+│   └── visualisation.ipynb
 │
-├── requirements.txt
+└── src/
+├── .env
+├── .gitattributes
 ├── README.md
-└── .env                             # (Optional) Environment variables for paths, Kafka server, etc.
+├── consumer.py
+|── patient_kafka_stream.py
+├── producer.py
+├── read_sample_data.py
+├── scaler.pkl
+├── spark_kafka_stream.py
+├── spark_test_java.py
+└── streamed_data.csv
 ```
 
 ---
