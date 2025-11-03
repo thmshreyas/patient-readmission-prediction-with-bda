@@ -95,8 +95,8 @@ It features two interactive dashboards:
 Clone the repository and create a virtual environment:
 
 ```bash
-git clone https://github.com/<your-username>/patient-readmission-prediction-with-bda.git
-cd patient-readmission-prediction-with-bda
+git clone https://github.com/<your-username>/patient-readmission-prediction-with-kafka.git
+cd patient-readmission-prediction-with-kafka
 
 python -m venv venv
 venv\Scripts\activate
@@ -135,6 +135,8 @@ kafka-server-start.bat config\server.properties
 ### 4️⃣ Create Kafka Topics
 
 ```bash
+kafka-topics.bat --create --topic patient-readmission--bootstrap-server localhost:9092
+above(topic is recommended)
 kafka-topics.bat --create --topic patient-input --bootstrap-server localhost:9092
 kafka-topics.bat --create --topic patient-predictions --bootstrap-server localhost:9092
 ```
