@@ -299,6 +299,4 @@ An **intelligent, real-time Big Data system** capable of predicting hospital rea
 
 ```
 
----
 
-```
